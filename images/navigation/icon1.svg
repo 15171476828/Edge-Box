@@ -1,0 +1,11 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="icon1">
+<path id="icon_matestore_24_focused" fill-rule="evenodd" clip-rule="evenodd" d="M3 3.9025C3 3.40406 3.40406 3 3.9025 3H10.0975C10.5959 3 11 3.40406 11 3.9025V10.0975C11 10.5959 10.5959 11 10.0975 11H3.9025C3.40406 11 3 10.5959 3 10.0975V3.9025ZM13 3.9025C13 3.40406 13.4041 3 13.9025 3H20.0975C20.5959 3 21 3.40406 21 3.9025V10.0975C21 10.5959 20.5959 11 20.0975 11H13.9025C13.4041 11 13 10.5959 13 10.0975V3.9025ZM3.9025 13C3.40406 13 3 13.4041 3 13.9025V20.0975C3 20.5959 3.40406 21 3.9025 21H10.0975C10.5959 21 11 20.5959 11 20.0975V13.9025C11 13.4041 10.5959 13 10.0975 13H3.9025Z" fill="#00B3BE"/>
+<g id="Rectangle 1666">
+<mask id="path-2-inside-1_19_57" fill="white">
+<rect x="13" y="13" width="8" height="8" rx="1"/>
+</mask>
+<rect x="13" y="13" width="8" height="8" rx="1" stroke="#00B3BE" stroke-width="3" stroke-linejoin="round" mask="url(#path-2-inside-1_19_57)"/>
+</g>
+</g>
+</svg>

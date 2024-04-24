@@ -1,0 +1,82 @@
+/* login_page */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color:  #FFF;;
+}
+
+.login-page{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.nio-logo-img {
+  width: 70.552px;
+  height: 66px;
+  flex-shrink: 0;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.welcome-text {
+  color: #363C54;
+  text-align: center;
+  font-family: Blue Sky Noto;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.nio-text {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#form_user {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 20px;
+  margin-left: -200px;
+}
+
+#form_user input {
+  display: flex;
+  width: 580px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-top: none; 
+  border-left: none; 
+  border-right: none;
+  border-bottom: 1px solid #ddd; 
+  border-radius: 0; 
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: rgba(0, 190, 190, 1);
+  width: 278px;
+  height: 66px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition-duration: 0.4s;
+}
+
+button:hover {
+  background-color: rgb(0, 156, 156);
+  border: none;
+}

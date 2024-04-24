@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>user_manage</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/user_manage.css">
+    <script src="../js/common.js"></script> 
+    <script src="../js/user_manage.js"></script> 
+    <style>
+        header {
+          background-color: #f0f0f0;
+        }
+      </style>
+</head>
+<body>
+    <div class="container">
+        <script>document.write(createNavigation());</script>
+
+        
+        <div class="content" >
+           <h2>用户管理</h2> 
+            <div class="user_manage" >  
+                <table>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Password</th>
+                        <th>Role</th>
+                        <th>Actions</th>
+                    </tr>
+            
+                </table>
+                
+                <button type="submit" class="btn" onclick="add_user()">Add User</button>
+                <button type="submit" class="btn" onclick="save_user_to_server()">Save</button>
+
+                
+            </div>
+
+        </div>
+
+       
+    </div>
+
+</body>
+</html>

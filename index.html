@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>login_page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/login_page.css">
+    <script src="./js/common.js"></script> 
+    <script src="./js/login_page.js"></script> 
+    <style>
+        header {
+          background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-page">
+            <img class="nio-logo-img" src="./images/login/NIO_icon.svg" alt="">
+            <h1><span class="welcome-text">Welcome to</span> <span class="nio-text">NIO</span></h1>
+
+        <form id="form_user">
+            <input type="text" id="user" placeholder="请输入域账号(例:san.zhang )">
+            <input type="password" id="password" placeholder="请输入密码" ><br>
+        </form>
+        <button type="submit" onclick="log_in()">登录</button>
+    </div>
+</body>
+</html>

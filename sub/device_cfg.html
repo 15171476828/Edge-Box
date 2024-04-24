@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>device_cfg</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/device_cfg.css">
+    <script src="../js/common.js"></script> 
+    <script src="../js/device_cfg.js"></script> 
+    <style>
+        header {
+          background-color: #f0f0f0;
+        }
+      </style>
+</head>
+<body>
+    <div class="container">
+        <script>document.write(createNavigation());</script>
+
+        
+        <div class="content">
+           <h2>设备配置</h2> 
+
+            <div class="device_cfg" >  
+                <form id="device-config-form" novalidate>
+                    <label for="device-name">设备名称：</label>
+                    <input type="text" id="device-name" name="device-name" placeholder="请输入设备名称">
+                    <label for="device-brand">设备品牌：</label>
+                    <select id="device-brand" name="device-brand" onchange="updateDeviceModel()">
+                        <option value="mitsubishi">MISUBISHI</option>
+                        <option value="siemens">SIEMENS</option>
+                        <option value="omron">OMRON</option>
+                        <option value="keyence">KEYENCE</option>
+                        <option value="modbus">MODBUS</option>
+                    </select>
+            
+                    <label for="device-model">设备型号：</label>
+                    <select id="device-model" name="device-model">
+                    </select>
+            
+                    <label for="ip-address">IP地址:</label>
+                    <input type="text" id="ip-address" name="ip-address" placeholder="请输入设备IP地址">
+            
+                    <label for="tcp-port">TCP端口:</label>
+                    <input type="number" id="tcp-port" name="tcp-port" placeholder="请输入TCP端口号">
+
+                    <label for="sampling-cycle">数采周期(单位ms):</label>
+                    <input type="number" id="sampling-cycle" name="sampling-cycle" placeholder="请输入数采周期">
+
+                    <label for="timeout">超时时间(单位ms):</label>
+                    <input type="number" id="timeout" name="timeout" placeholder="请输入超时时间">
+            
+                    <label for="retry-count">重试次数：</label>
+                    <input type="number" id="retry-count" name="retry-count" placeholder="请输入重试次数">
+
+                </form>
+                    <button class="save-button" onclick="write_device_param_to_server()" >提交配置</button>  
+                    <p id="device-save-status"></p>  
+            </div>        
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <script src="../js/common.js"></script> 
+    <script src="../js/home.js"></script> 
+    <style>
+        header {
+          background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <script>document.write(createNavigation());</script>
+
+        <div class="content" >
+           <h2 class="page-title-text"> 状态监控</h2> 
+           <div class="class_status" > 
+                <div class="home_status">  
+                    <div class="home-status-header">
+                        <h4 class="home-status-header-text">硬件状态</h4>
+                    </div>
+                
+                    <div class="home_status_details">
+                        <form class="messege-form">
+                            <p id="cpu_usage" class="status-value-text">32%</p>
+                            <p class="title-value-text">CPU使用率</p>
+                        </form>
+                    
+                        <form class="messege-form"> 
+                            <p id="cpu_temperature" class="status-value-text">42 ℃</p>
+                            <p class="title-value-text">CPU温度</p>
+                        </form>
+                        
+                        <form class="messege-form"> 
+                            <p id="total_memory"  class="status-value-text">524288 KB</p>
+                            <p class="title-value-text">总内存</p>
+                        </form>
+                    
+                        <form class="messege-form">
+                            <p id="memory_usage" class="status-value-text">暂无数据</p>
+                            <p class="title-value-text">内存使用量</p>
+                        </form>
+                    </div>
+                </div>
+
+                
+
+                <div class="home_status">
+                    <div class="home-status-header">
+                        <h4 class="home-status-header-text" id="status_4g_caption">4G联网状态</h4>
+                    </div>
+                    <div class="home_status_details">
+                        <form class="messege-form">
+                            <p id="status_4g" class="status-value-text">在线</p>
+                            <p class="title-value-text">4G联网状态</p>
+                        </form>
+                        <form class="messege-form">
+                            <p id="online_time" class="status-value-text">0s</p>
+                            <p class="title-value-text">4G在线时间</p>
+                        </form>
+                        <form class="messege-form">
+                            <p id="network_type" class="status-value-text">LET(4G)</p>
+                            <p class="title-value-text">网络类型</p>
+                        </form>
+                        <form class="messege-form">
+                            <p id="signal_strength" class="status-value-text">65%</p>
+                            <p class="title-value-text">信号强度</p>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="home_status">
+                    <div class="home-status-header">
+                        <h4 class="home-status-header-text" id="wifi_caption">WiFi状态</h4>
+                    </div>
+                    <div class="home_status_details">
+                        <form class="messege-form">
+                            <p id="wifi_status" class="status-value-text">已连接</p>
+                            <p class="title-value-text">WiFi状态</p>
+                        </form>
+                        <form class="messege-form">
+                            <p id="ip_address" class="status-value-text">192.168.1.100</p>
+                            <p class="title-value-text">IP地址</p>
+                        </form>
+                        <form class="messege-form">
+                            <p id="network_name" class="status-value-text">MyWiFi</p>
+                            <p class="title-value-text">网络名称</p>
+                        </form>
+                        <form class="messege-form">
+                            <p id="wifi_strength" class="status-value-text">75%</p>
+                            <p class="title-value-text">信号强度</p>
+                        </form>
+                    </div>
+                </div>
+        
+                <div class="home_status">
+                    <div class="home-status-header">
+                        <h4 class="home-status-header-text" id="data_acquisition_caption">数采设备状态</h4>
+                    </div>
+                    <div class="home_status_details">
+                        <form class="messege-form">
+                            <p id="device_status" class="status-value-text">正常</p>
+                            <p class="title-value-text">设备状态</p>
+                        </form>
+                        <form class="messege-form">
+                            <p id="device_code" class="status-value-text">DA-12345</p>
+                            <p class="title-value-text">设备编号</p>
+                        </form>
+                        <form class="messege-form">
+                            <p id="data_period" class="status-value-text">1s</p>
+                            <p class="title-value-text">数采周期</p>
+                        </form>
+                        <form class="messege-form">
+                            <p id="protocol_type" class="status-value-text">Modbus</p>
+                            <p class="title-value-text">南向协议类型</p>
+                        </form>
+                    </div>
+                </div>
+        
+                <div class="home_status">
+                    <div class="home-status-header">
+                        <h4 class="home-status-header-text" id="server_caption">服务器状态</h4>
+                    </div>
+                    <div class="home_status_details">
+                        <form class="messege-form">
+                            <p id="server_status" class="status-value-text">在线</p>
+                            <p class="title-value-text">服务器状态</p>
+                        </form>
+                        <form class="messege-form">
+                            <p id="server_ip" class="status-value-text">10.0.0.50</p>
+                            <p class="title-value-text">IP地址</p>
+                        </form>
+                        <form class="messege-form">
+                            <p id="report_period" class="status-value-text">5min</p>
+                            <p class="title-value-text">上报周期</p>
+                        </form>
+                        <form class="messege-form">
+                            <p id="north_protocol_type" class="status-value-text">HTTP</p>
+                            <p class="title-value-text">北向协议类型</p>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+       
+    </div>
+</body>
+</html>

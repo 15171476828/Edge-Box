@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>server_cfg</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/server_cfg.css">
+    <script src="../js/common.js"></script> 
+    <script src="../js/server_cfg.js"></script> 
+    <style>
+        header {
+          background-color: #f0f0f0;
+        }
+      </style>
+</head>
+<body>
+    <div class="container">
+        <script>document.write(createNavigation());</script>
+
+        
+        <div class="content">
+           <h2>服务器配置</h2> 
+
+            <div class="server_cfg" >  
+
+                <form id="protocol-config-form" novalidate>
+                    <label for="protocol-type">Protocol Type:</label>
+                    <select id="protocol-type" name="protocol-type" onchange="updateProtocolForm()">
+                        <option value="opc-ua">OPC UA Server</option>
+                        <option value="mqtt">MQTT</option>
+                        <option value="webapi">WEBAPI</option>
+                    </select><br>
+            
+                    <div id="opc-ua-config" >
+                        <label for="server-name">Server Name:</label>
+                        <input type="text" id="server-name" name="server-name" required><br>
+                
+                        <label for="server-url">Server URL:</label>
+                        <input type="url" id="server-url" name="server-url" required><br>
+                
+                        <label for="security-policy">Security Policy:</label>
+                        <select id="security-policy" name="security-policy">
+                            <option value="none">None</option>
+                            <option value="basic128rsa15">Basic128Rsa15</option>
+                            <option value="basic256">Basic256</option>
+                            <option value="basic256sha256">Basic256Sha256</option>
+                        </select><br>
+                
+                        <label for="security-mode">Security Mode:</label>
+                        <select id="security-mode" name="security-mode">
+                            <option value="none">None</option>
+                            <option value="sign">Sign</option>
+                            <option value="sign-encrypt">Sign & Encrypt</option>
+                        </select><br>
+                
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username"><br>
+                
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password"><br>
+                    </div>
+            
+                    <div id="mqtt-config" >
+                        <label for="mqtt-broker">MQTT Broker:</label>
+                        <input type="url" id="mqtt-broker" name="mqtt-broker" required><br>
+
+                        <label for="mqtt-subtopic">MQTT SubTopic:</label>
+                        <input type="text" id="mqtt-subtopic" name="mqtt-subtopic" required><br>
+
+                        <label for="mqtt-pubtopic">MQTT PubTopic:</label>
+                        <input type="text" id="mqtt-pubtopic" name="mqtt-pubtopic" required><br>
+
+                        <label for="mqtt-username">MQTT Username:</label>
+                        <input type="text" id="mqtt-username" name="mqtt-username"><br>
+
+                        <label for="mqtt-password">MQTT Password:</label>
+                        <input type="password" id="mqtt-password" name="mqtt-password"><br>
+                    </div>
+            
+                    <div id="webapi-config" >
+                        <!-- WEBAPI Configuration Options -->
+                        <label for="webapi-url">WEBAPI URL:</label>
+                        <input type="url" id="webapi-url" name="webapi-url" required><br>
+
+                        <label for="webapi-method">WEBAPI Method:</label>
+                        <select id="webapi-method" name="webapi-method">
+                            <option value="get">GET</option>
+                            <option value="post">POST</option>
+                            <option value="put">PUT</option>
+                            <option value="delete">DELETE</option>
+                        </select><br>
+                    </div>
+                    
+                </form>  
+                <button class="save-button" onclick="write_server_param_to_server()" >提交配置</button> 
+                <p id="server-save-status"></p>
+            </div>        
+        </div>
+    </div>
+</body>
+</html> 

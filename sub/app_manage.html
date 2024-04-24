@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>app_manage</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/app_manage.css">
+    <script src="../js/common.js"></script> 
+    <script src="../js/app_manage.js"></script> 
+    <style>
+        header {
+          background-color: #f0f0f0;
+        }
+      </style>
+</head>
+<body>
+    <div class="container">g
+        <script>document.write(createNavigation());</script>
+
+        
+        <div class="content" >
+           <h2>应用管理</h2> 
+            <div class="app_manage" >  
+                
+                <table id="apps">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Vision</th>
+                            <th>DateChanged</th>
+                            <th>Status</th>
+                            <th>CPU</th>
+                            <th>RAM</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="appList">
+                        <!-- 应用列表将在这里动态生成 -->
+                    </tbody>
+                </table>
+
+                <form id="new-app-form">
+                    <label for="new-app-file">选择应用文件：</label>
+                    <input type="file" id="new-app-file">
+                    <button type="submit" class="btn" onclick="install_app()">安装应用</button>
+                    <p id="upload-status"></p>
+                </form>
+                
+            </div>
+
+        </div> 
+
+       
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+.device_cfg {
+  position: fixed;
+  top: 120px;
+  left: 300px;
+  right: 100px;
+  height: 800px;
+  text-align: left;
+  border: 1px dashed rgba(172, 169, 169, 0.664); /* 设置2像素宽度的红色短横线边框 */
+}
+
+form {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+form label {
+  font-weight: bold;
+}
+
+form input, form select ,form button{
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+

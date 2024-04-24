@@ -1,0 +1,57 @@
+.tags_cfg {
+  position: fixed;
+  top: 120px;
+  left: 300px;
+  right: 100px;
+  height: 800px;
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th, td {
+        font-size: 13px;
+        border: 1px solid rgb(252, 252, 252);
+        padding: 0.5rem;
+        border-bottom: 1px solid rgb(226, 231, 231);
+}
+th {
+  background-color: #f2f2f2;
+}
+th:nth-child(1), td:nth-child(1) {
+  width: 3rem;
+}
+.table-controls {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+
+input, select {
+  width: 90%;
+  border-radius: 4px;
+  border: 1px solid rgb(226, 231, 231);
+}
+
+.btn {
+  background-color: rgba(0, 190, 190, 1);
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 4px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 6px;
+  margin-top: 2px;
+  margin-right: 2px;
+  transition-duration: 0.4s;
+  border-radius: 2px; /* 圆角 */
+}
+
+.btn:hover {
+  background-color: rgb(0, 156, 156);
+  border: none;
+}

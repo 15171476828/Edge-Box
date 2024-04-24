@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>system_manage</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/system_manage.css">
+    <script src="../js/common.js"></script> 
+    <style>
+        header {
+          background-color: #f0f0f0;
+        }
+      </style>
+</head>
+<body>
+    <div class="container">
+        <script>document.write(createNavigation());</script>
+
+        
+        <div class="content" >
+           <h2>系统管理</h2> 
+            <div class="system_manage" >  
+              <!-- 系统升级 -->
+              <section>
+                <h3>系统升级</h3>
+                <form id="upgrade-form">
+                  <label for="upgrade-file">选择升级文件：</label>
+                  <input type="file" id="upgrade-file">
+                  <button type="submit">上传文件</button>
+                  <p id="upload-status"></p>
+                </form>
+                
+              </section>
+
+              <!-- 时间设置 -->
+              <section>
+                <h3>时间设置</h3>
+
+                <p id="server-time" class="system-time-text"></p>
+                <!-- 手动设置时间 -->
+                <form id="time-setting-form">
+                    <label for="time-setting">设置时间：</label>
+                    <input type="datetime-local" id="time-setting">
+                    <button id="time-setting-button" type="submit">设置时间</button>
+                    <p id="time-set-status"></p>
+                  
+
+                    <!-- NTP同步 -->
+                    <label for="ntp-url">NTP服务器:</label>
+                    <input type="text" id="ntp-url" name="ntp-url" placeholder="请输入NTP地址" >
+                    <button id="ntp-sync" type="submit">NTP同步</button>
+                    <p id="ntp-set-status"></p>
+                </form>
+              </section>
+
+              <!-- 打印日记 -->
+              <section>
+                <h3>打印日记</h3>
+                <textarea id="log-textarea" rows="10" readonly></textarea>
+                <button id="print-log" type="submit" >系统日记</button>
+                <button id="app-log" type="submit">应用日记</button>
+              </section>
+
+              <script src="../js/system_manage.js"></script> 
+                
+            </div>
+
+        </div>
+
+       
+    </div>
+
+</body>
+</html>

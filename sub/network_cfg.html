@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>network_cfg</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/network_cfg.css">
+    <script src="../js/common.js"></script> 
+    <script src="../js/network_cfg.js"></script> 
+    <style>
+        header {
+          background-color: #f0f0f0;
+        }
+      </style>
+</head>
+<body>
+    <div class="container">
+        <script>document.write(createNavigation());</script>
+
+        
+        <div class="content">
+            <h2>网络配置</h2> 
+            <div class="class_network" >     
+                <form id="form_network">
+                    <h3>WIFI配置</h3> 
+                    <div class="class_wifi" >  
+                      <label>启用WiFi:<input type="checkbox" id="wifi" name="wifi" value="enabled" class="checkbox-inline" onchange="toggleWifi(this.checked)"></label><br>
+                      <label for="ssid">SSID:</label><br>
+                      <input type="text" id="ssid" name="ssid"><br>
+                      <label for="password">Password:</label><br>
+                      <input type="password" id="password" name="password"><br>
+                      <label for="security">Security:</label><br>
+                      <select id="security" name="security">
+                          <option value="wpa">WPA/WPA2</option>
+                          <option value="wep">WEP</option>
+                          <option value="none">None</option>
+                      </select><br>
+                      <label for="channel">Channel:</label><br>
+                      <input type="number" id="channel" name="channel" min="1" max="11"><br>
+                    </div>
+                    <h3>LAN配置</h3> 
+                    <div class="class_lan" >  
+                      <label>DHCP:<input type="checkbox" id="lan_dhcp" name="lan_dhcp" value="enabled" class="checkbox-inline" onchange="toggleLan(this.checked)"></label><br>
+                      <label for="lan_ip">IP地址:</label><br>
+                      <input type="text" id="lan_ip" name="lan_ip"><br>
+                      <label for="lan_subnet">子网掩码:</label><br>
+                      <input type="text" id="lan_subnet" name="lan_subnet"><br>
+                      <label for="lan_gateway">默认网关:</label><br>
+                      <input type="text" id="lan_gateway" name="lan_gateway">
+                      <label for="lan_dns">DNS:</label><br>
+                      <input type="text" id="lan_dns" name="lan_dns">
+                    </div>  
+                    <h3>WAN配置</h3> 
+                    <div class="class_wan" >  
+                      <label>DHCP:<input type="checkbox" id="wan_dhcp" name="wan_dhcp" value="enabled" class="checkbox-inline" onchange="toggleWan(this.checked)"></label><br>
+                      <label for="wan_ip">IP地址:</label><br>
+                      <input type="text" id="wan_ip" name="wan_ip"><br>
+                      <label for="wan_subnet">子网掩码:</label><br>
+                      <input type="text" id="wan_subnet" name="wan_subnet"><br>
+                      <label for="wan_gateway">默认网关:</label><br>
+                      <input type="text" id="wan_gateway" name="wan_gateway">
+                      <label for="wan_dns">DNS:</label><br>
+                      <input type="text" id="wan_dns" name="wan_dns">
+                      <label for="wan_mac">MAC:</label><br>
+                      <input type="text" id="wan_mac" name="wan_mac">
+                    </div>  
+                </form>  
+                <button class="save-button" onclick="write_network_param_to_server()" >Save</button>    
+                <p id="network-save-status"></p>         
+                   
+            </div>     
+        </div>
+    </div>
+</body>
+</html>

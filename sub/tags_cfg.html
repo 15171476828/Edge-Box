@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>tags_cfg</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/tags_cfg.css">
+    <script src="../js/common.js"></script> 
+    <script src="../js/tags_cfg.js"></script> 
+    <script src="../js/xlsx.js"></script>
+    <style>
+        header {
+          background-color: #f0f0f0;
+        }
+      </style>
+</head>
+<body>
+    <div class="container">
+        <script>document.write(createNavigation());</script>
+
+        
+        <div class="content">
+           <h2>数采标签管理</h2> 
+
+            <div class="tags_cfg" >  
+                <div class="table-controls">
+                    
+                    <button id="import" class="btn">导入</button>
+                    <button id="export" class="btn">导出</button>
+                    
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>序号</th>
+                            <th>设备名</th>
+                            <th>变量名</th>
+                            <th>方法</th>
+                            <th>寄存器</th>
+                            <th>地址</th>
+                            <th>数据类型</th>
+                            <th>数据长度</th>
+                            <th>当前值</th>
+                            <th>删除</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- 表格数据行在这里添加 -->
+                    </tbody>
+                </table>
+                <button id="addRow" class="btn" onclick="manually_add_row()">新增</button>
+                <button id="save" class="btn" onclick="write_tags_param_to_server()">保存</button>
+            </div>        
+        </div>
+    </div>
+</body>
+</html>
