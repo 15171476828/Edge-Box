@@ -1,12 +1,11 @@
 # app.py
 from flask_restful import Resource, Api, reqparse, abort
 import json
-import home
-
+import login_page
+import home_system
 
 
 class commonhandle(Resource):
-
     def post(self):
         parser = reqparse.RequestParser()
         parser.add_argument('MsgID', type=int, location='json', required=True)
@@ -14,19 +13,49 @@ class commonhandle(Resource):
         args = parser.parse_args()
         private_data = args['data']
         MsgID  = args['MsgID']
-        # print(private_data['user'])
 
-        print('---->>>> 1445:',MsgID)
-
-        if MsgID == 16:
-            if private_data['user'] == 'iiot' and private_data['password'] == '123456':
-                return {'MsgID':MsgID, 'Result': 0, 'data':{'pass':1}}
-            else:
-                return {'MsgID':MsgID, 'Result': 0, 'data':{'pass':-2}}
+        if MsgID == 1:
+            return network_cfg.response_network(private_data, MsgID)
+        elif MsgID == 2:
+            return network_cfg.save_network(private_data, MsgID)
+        elif MsgID == 3:
+            return server_cfg.response_server(private_data, MsgID)
+        elif MsgID == 4:
+            return server_cfg.save_server(private_data, MsgID)
+        elif MsgID == 5:
+            return device_cfg.response_device(private_data, MsgID)
+        elif MsgID == 6:
+            return device_cfg.save_device(private_data, MsgID)
+        elif MsgID == 7:
+            return tags_cfg.response_tags(private_data, MsgID)
+        elif MsgID == 8:
+            return tags_cfg.save_tags(private_data, MsgID)
+        elif MsgID == 9:
+            return system_manage.save_system_restart(private_data, MsgID)
         elif MsgID == 10:
-            return home.get_original_string()
+            return home_system.response_system_status()
+        elif MsgID == 11:
+            return tags_cfg.response_tags_value(private_data, MsgID)
+        elif MsgID == 12:
+            return system_manage.save_system(private_data, MsgID)
+        elif MsgID == 13:
+            return system_manage.response_system(private_data, MsgID)
+        elif MsgID == 14:
+            return user_manage.save_user(private_data, MsgID)
+        elif MsgID == 15:
+            return user_manage.response_user(private_data, MsgID)
+        elif MsgID == 16:
+            return login_page.response_login(private_data, MsgID)
+        elif MsgID == 17:
+            return app_manage.response_app(private_data, MsgID)
+        elif MsgID == 18:
+            return app_manage.save_app(private_data, MsgID)
+        elif MsgID == 19:
+            return network_cfg.response_vpn(private_data, MsgID)
+        elif MsgID == 20:
+            return network_cfg.save_vpn(private_data, MsgID)
         else:
-            return {'MsgID':MsgID, 'Result': 1}
+            return {'MsgID':MsgID, 'Result': 'undefined'}
 
     def get(self):
 	    abort(RC_NET_METHOD_NOT_ALLOWED)

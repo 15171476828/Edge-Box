@@ -29,5 +29,5 @@ original_string = """
 """
 
 
-def get_original_string():
+def response_system_status():
     return json.loads(original_string)
