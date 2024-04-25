@@ -5,7 +5,12 @@ import network_cfg
 import login_page
 import home_system
 import home_system
-
+import server_cfg
+import app_manage
+import device_cfg 
+import system_manage
+import tags_cfg
+import user_manage
 
 
 class commonhandle(Resource):
@@ -17,11 +22,13 @@ class commonhandle(Resource):
         private_data = args['data']
         MsgID  = args['MsgID']
 
-        if MsgID == 1:
+        print("---->>>> 240425-1531 MsgID:",MsgID)
+
+        if MsgID == 1:                                                              # phase 1:240425 done
             return network_cfg.response_network(private_data, MsgID)
         elif MsgID == 2:
             return network_cfg.save_network(private_data, MsgID)
-        elif MsgID == 3:
+        elif MsgID == 3:                                                            # phase 1:240425 done
             return server_cfg.response_server(private_data, MsgID)
         elif MsgID == 4:
             return server_cfg.save_server(private_data, MsgID)
@@ -29,8 +36,8 @@ class commonhandle(Resource):
             return device_cfg.response_device(private_data, MsgID)
         elif MsgID == 6:
             return device_cfg.save_device(private_data, MsgID)
-        elif MsgID == 7:
-            return tags_cfg.response_tags(private_data, MsgID)
+        elif MsgID == 7:                                                            # phase 1:240424 done
+            return tags_cfg.response_tags_info(private_data, MsgID)
         elif MsgID == 8:
             return tags_cfg.save_tags(private_data, MsgID)
         elif MsgID == 9:
@@ -41,16 +48,16 @@ class commonhandle(Resource):
             return tags_cfg.response_tags_value(private_data, MsgID)
         elif MsgID == 12:
             return system_manage.save_system(private_data, MsgID)
-        elif MsgID == 13:
-            return system_manage.response_system(private_data, MsgID)
+        elif MsgID == 13:                                                             # phase 1:240425 done
+            return system_manage.response_systemMgrFromServer(private_data, MsgID)
         elif MsgID == 14:
             return user_manage.save_user(private_data, MsgID)
         elif MsgID == 15:
-            return user_manage.response_user(private_data, MsgID)
+            return user_manage.response_loadUser(private_data, MsgID)
         elif MsgID == 16:                                                             # phase 1:240424 done
             return login_page.response_login(private_data, MsgID)
-        elif MsgID == 17:
-            return app_manage.response_app(private_data, MsgID)
+        elif MsgID == 17:                                                             # phase 1:240425 done
+            return app_manage.response_appStatus(private_data, MsgID)
         elif MsgID == 18:
             return app_manage.save_app(private_data, MsgID)
         elif MsgID == 19:
