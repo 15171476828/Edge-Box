@@ -1,8 +1,11 @@
 # app.py
 from flask_restful import Resource, Api, reqparse, abort
 import json
+import network_cfg
 import login_page
 import home_system
+import home_system
+
 
 
 class commonhandle(Resource):
@@ -32,7 +35,7 @@ class commonhandle(Resource):
             return tags_cfg.save_tags(private_data, MsgID)
         elif MsgID == 9:
             return system_manage.save_system_restart(private_data, MsgID)
-        elif MsgID == 10:
+        elif MsgID == 10:                                                            # phase 1:240424 done
             return home_system.response_system_status()
         elif MsgID == 11:
             return tags_cfg.response_tags_value(private_data, MsgID)
@@ -44,7 +47,7 @@ class commonhandle(Resource):
             return user_manage.save_user(private_data, MsgID)
         elif MsgID == 15:
             return user_manage.response_user(private_data, MsgID)
-        elif MsgID == 16:
+        elif MsgID == 16:                                                             # phase 1:240424 done
             return login_page.response_login(private_data, MsgID)
         elif MsgID == 17:
             return app_manage.response_app(private_data, MsgID)
