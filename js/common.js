@@ -3,7 +3,7 @@
 // const ipAddress = '192.168.2.1';
 // var serverURL = `http://${ipAddress}:8080/`;
 const myGunicorn = '/api/commonhandle';
-const ipAddress = `192.168.192.139${myGunicorn}`;
+const ipAddress = `192.168.192.140${myGunicorn}`;
 var serverURL = `http://${ipAddress}`;
 // YZH: Modify end:
 
